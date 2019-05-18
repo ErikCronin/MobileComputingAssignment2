@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MobileComputingAssignment2</string>
+    <string name="memory_game_for_smart_kids">Memory Game for Smart Kids</string>
+    <string name="start_game">Start Game!</string>
+    <string name="settings">Settings</string>
+    <string name="sound">Sound:</string>
+    <string name="on">On</string>
+    <string name="music">Music:</string>
+    <string name="high_scores">High Scores</string>
+    <string name="player_name_one">Lizzy</string>
+    <string name="player_score_one">30</string>
+    <string name="player_name_two">George</string>
+    <string name="player_score_two">25</string>
+    <string name="player_name_three">Rebecca</string>
+    <string name="player_score_three">20</string>
+    <string name="player_name_four">Greg</string>
+    <string name="player_score_four">15</string>
+    <string name="player_name_five">Hannah-Gatsby</string>
+    <string name="player_score_five">10</string>
+</resources>
