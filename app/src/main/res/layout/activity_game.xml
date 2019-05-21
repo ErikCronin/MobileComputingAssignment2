@@ -62,6 +62,13 @@
             android:hint="@string/input"
             tools:ignore="Autofill" />
 
+        <Button
+            android:id="@+id/button_guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guess"
+            android:onClick="buttonClicked_guessCheck"/>
+
     </TableRow>
 
     <TableLayout
@@ -90,7 +97,8 @@
                 android:id="@+id/imageButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker3"/>
 
         </TableRow>
 
@@ -102,19 +110,22 @@
                 android:id="@+id/imageButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker4"/>
 
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker5"/>
 
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker6"/>
         </TableRow>
 
         <TableRow
@@ -125,19 +136,22 @@
                 android:id="@+id/imageButton7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker7"/>
 
             <ImageButton
                 android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker8"/>
 
             <ImageButton
                 android:id="@+id/imageButton9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker9"/>
         </TableRow>
 
         <TableRow
@@ -148,19 +162,22 @@
                 android:id="@+id/imageButton10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker10"/>
 
             <ImageButton
                 android:id="@+id/imageButton11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker11"/>
 
             <ImageButton
                 android:id="@+id/imageButton12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:onClick="buttonClicked_numberChecker12"/>
         </TableRow>
 
     </TableLayout>

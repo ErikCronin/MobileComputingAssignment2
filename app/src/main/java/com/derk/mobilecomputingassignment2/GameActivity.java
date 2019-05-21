@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -119,11 +120,12 @@ public class GameActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void buttonClicked_numberChecker(View view){
-        ImageView imageview = findViewById(R.id.imageButton);
         TextView textView = findViewById(R.id.first_number_id);
         String first_number = textView.getText().toString();
+
         TextView textView2 = findViewById(R.id.second_number_id);
         String second_number = textView2.getText().toString();
+
         if(first_number.equals("")){
             textView.setText(Integer.toString(cardOne + 1));
         } else if(second_number.equals("")){
@@ -133,15 +135,187 @@ public class GameActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void buttonClicked_numberChecker2(View view){
-        ImageView imageview = findViewById(R.id.imageButton2);
         TextView textView = findViewById(R.id.first_number_id);
         String first_number = textView.getText().toString();
+
         TextView textView2 = findViewById(R.id.second_number_id);
         String second_number = textView2.getText().toString();
+
         if(first_number.equals("")){
             textView.setText(Integer.toString(cardTwo + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardTwo + 1));
         } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker3(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardThree + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardThree + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker4(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardFour + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardFour + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker5(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardFive + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardFive + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker6(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardSix + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardSix + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker7(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardSeven + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardSeven + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker8(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardEight + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardEight + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker9(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardNine + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardNine + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker10(View view){
+        ImageView imageview = findViewById(R.id.imageButton10);
+        TextView textView = findViewById(R.id.first_number_id);
+
+        String first_number = textView.getText().toString();
+        TextView textView2 = findViewById(R.id.second_number_id);
+
+        String second_number = textView2.getText().toString();
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardTen + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardTen + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker11(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardEleven + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardEleven + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker12(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardTwelve + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardTwelve + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    public void buttonClicked_guessCheck(View view){
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+        int numero_uno = Integer.parseInt(first_number);
+
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+        int numero_duo = Integer.parseInt(second_number);
+
+        EditText editText = findViewById(R.id.editText);
+        String userGuess = editText.getText().toString();
+        int usero_guessero = Integer.parseInt(userGuess);
+
+        if((numero_uno + numero_duo) == usero_guessero){
+            System.out.println("Correct");
+        } else {
+            System.out.println("No!");
+        }
     }
 }

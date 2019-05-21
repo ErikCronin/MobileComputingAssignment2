@@ -21,4 +21,5 @@
     <string name="plus">+</string>
     <string name="equals">=</string>
     <string name="input">Input</string>
+    <string name="guess">Guess</string>
 </resources>
