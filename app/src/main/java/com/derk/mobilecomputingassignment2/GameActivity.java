@@ -1,5 +1,6 @@
 package com.derk.mobilecomputingassignment2;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +17,20 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
+
+    Random rand = new Random();
+    int cardOne = rand.nextInt(9+1);
+    int cardTwo = rand.nextInt(9+1);
+    int cardThree = rand.nextInt(9+1);
+    int cardFour = rand.nextInt(9+1);
+    int cardFive = rand.nextInt(9+1);
+    int cardSix = rand.nextInt(9+1);
+    int cardSeven = rand.nextInt(9+1);
+    int cardEight = rand.nextInt(9+1);
+    int cardNine = rand.nextInt(9+1);
+    int cardTen = rand.nextInt(9+1);
+    int cardEleven = rand.nextInt(9+1);
+    int cardTwelve = rand.nextInt(9+1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,19 +44,7 @@ public class GameActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Random rand = new Random();
-        int cardOne = rand.nextInt(9+1);
-        int cardTwo = rand.nextInt(9+1);
-        int cardThree = rand.nextInt(9+1);
-        int cardFour = rand.nextInt(9+1);
-        int cardFive = rand.nextInt(9+1);
-        int cardSix = rand.nextInt(9+1);
-        int cardSeven = rand.nextInt(9+1);
-        int cardEight = rand.nextInt(9+1);
-        int cardNine = rand.nextInt(9+1);
-        int cardTen = rand.nextInt(9+1);
-        int cardEleven = rand.nextInt(9+1);
-        int cardTwelve = rand.nextInt(9+1);
+
 
         try{
             ImageView imageview = findViewById(R.id.imageButton);
@@ -113,7 +117,31 @@ public class GameActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @SuppressLint("SetTextI18n")
     public void buttonClicked_numberChecker(View view){
         ImageView imageview = findViewById(R.id.imageButton);
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardOne + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardOne + 1));
+        } else {System.out.println("yeet");}
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void buttonClicked_numberChecker2(View view){
+        ImageView imageview = findViewById(R.id.imageButton2);
+        TextView textView = findViewById(R.id.first_number_id);
+        String first_number = textView.getText().toString();
+        TextView textView2 = findViewById(R.id.second_number_id);
+        String second_number = textView2.getText().toString();
+        if(first_number.equals("")){
+            textView.setText(Integer.toString(cardTwo + 1));
+        } else if(second_number.equals("")){
+            textView2.setText(Integer.toString(cardTwo + 1));
+        } else {System.out.println("yeet");}
     }
 }
