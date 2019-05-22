@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
@@ -33,10 +35,19 @@ public class GameActivity extends AppCompatActivity {
     int cardEleven = rand.nextInt(9+1);
     int cardTwelve = rand.nextInt(9+1);
 
+    public static int timeCounter = 0;
+    private boolean running = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        if(savedInstanceState != null){
+            timeCounter = savedInstanceState.getInt("timeCounter");
+            running = savedInstanceState.getBoolean("running");
+        }
+        runTimer();
 
         AssetManager manager = getAssets();
         String[] number = new String[0];
@@ -109,8 +120,35 @@ public class GameActivity extends AppCompatActivity {
             Bitmap bitmap12 = BitmapFactory.decodeStream(stream12);
             imageview12.setImageBitmap(bitmap12);
         } catch (IOException e) {
-            System.out.println("failed to get names");
+            System.out.println("failed to get cards");
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("timeCounter", timeCounter);
+        savedInstanceState.putBoolean("running", running);
+    }
+
+    private void runTimer(){
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                final TextView timeView = findViewById(R.id.time_view);
+                int hours = timeCounter /3600;
+                int minutes = (timeCounter %3600)/60;
+                int secs = timeCounter %60;
+
+                if(running){
+                    timeCounter++;
+                }
+                String time = String.format(Locale.getDefault(),"%d:%02d:%02d", hours, minutes, secs);
+                timeView.setText(time);
+                handler.postDelayed(this, 1000);
+            }
+        });
     }
 
     public void buttonClicked_settings(View view){
@@ -130,7 +168,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardOne + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardOne + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -145,7 +183,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardTwo + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardTwo + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -160,7 +198,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardThree + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardThree + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -175,7 +213,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardFour + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardFour + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -190,7 +228,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardFive + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardFive + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -205,7 +243,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardSix + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardSix + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -220,7 +258,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardSeven + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardSeven + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -235,7 +273,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardEight + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardEight + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -250,7 +288,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardNine + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardNine + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -266,7 +304,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardTen + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardTen + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -281,7 +319,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardEleven + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardEleven + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     @SuppressLint("SetTextI18n")
@@ -296,7 +334,7 @@ public class GameActivity extends AppCompatActivity {
             textView.setText(Integer.toString(cardTwelve + 1));
         } else if(second_number.equals("")){
             textView2.setText(Integer.toString(cardTwelve + 1));
-        } else {System.out.println("yeet");}
+        } else {System.out.println("Finish the sum first");}
     }
 
     public void buttonClicked_guessCheck(View view){
@@ -314,8 +352,10 @@ public class GameActivity extends AppCompatActivity {
 
         if((numero_uno + numero_duo) == usero_guessero){
             System.out.println("Correct");
+            textView.setText("");
+            textView2.setText("");
         } else {
-            System.out.println("No!");
+            System.out.println("Not correct!");
         }
     }
 }
