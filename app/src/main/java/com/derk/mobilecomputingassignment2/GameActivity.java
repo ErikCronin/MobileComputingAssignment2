@@ -1,6 +1,7 @@
 package com.derk.mobilecomputingassignment2;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -9,13 +10,15 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Random;
 
@@ -36,6 +39,7 @@ public class GameActivity extends AppCompatActivity {
     int cardTwelve = rand.nextInt(9+1);
 
     public static int timeCounter = 0;
+    public static int scoreCounter = 10000;
     private boolean running = true;
 
     @Override
@@ -48,6 +52,7 @@ public class GameActivity extends AppCompatActivity {
             running = savedInstanceState.getBoolean("running");
         }
         runTimer();
+        runScore();
 
         AssetManager manager = getAssets();
         String[] number = new String[0];
@@ -147,6 +152,24 @@ public class GameActivity extends AppCompatActivity {
                 String time = String.format(Locale.getDefault(),"%d:%02d:%02d", hours, minutes, secs);
                 timeView.setText(time);
                 handler.postDelayed(this, 1000);
+            }
+        });
+    }
+
+    private void runScore(){
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                final TextView scoreView = findViewById(R.id.score_view);
+                int secs = scoreCounter;
+
+                if(running){
+                    scoreCounter--;
+                }
+                String time = String.format(Locale.getDefault(),"%06d", secs);
+                scoreView.setText(time);
+                handler.postDelayed(this, 500);
             }
         });
     }
@@ -293,7 +316,6 @@ public class GameActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void buttonClicked_numberChecker10(View view){
-        ImageView imageview = findViewById(R.id.imageButton10);
         TextView textView = findViewById(R.id.first_number_id);
 
         String first_number = textView.getText().toString();
@@ -338,24 +360,50 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void buttonClicked_guessCheck(View view){
-        TextView textView = findViewById(R.id.first_number_id);
-        String first_number = textView.getText().toString();
-        int numero_uno = Integer.parseInt(first_number);
+        try {
+            TextView textView = findViewById(R.id.first_number_id);
+            String first_number = textView.getText().toString();
+            int numero_uno = Integer.parseInt(first_number);
 
-        TextView textView2 = findViewById(R.id.second_number_id);
-        String second_number = textView2.getText().toString();
-        int numero_duo = Integer.parseInt(second_number);
+            TextView textView2 = findViewById(R.id.second_number_id);
+            String second_number = textView2.getText().toString();
+            int numero_duo = Integer.parseInt(second_number);
 
-        EditText editText = findViewById(R.id.editText);
-        String userGuess = editText.getText().toString();
-        int usero_guessero = Integer.parseInt(userGuess);
+            EditText editText = findViewById(R.id.editText);
+            String userGuess = editText.getText().toString();
+            int usero_guessero = Integer.parseInt(userGuess);
 
-        if((numero_uno + numero_duo) == usero_guessero){
-            System.out.println("Correct");
-            textView.setText("");
-            textView2.setText("");
-        } else {
-            System.out.println("Not correct!");
+            if ((numero_uno + numero_duo) == usero_guessero) {
+                Context context = getApplicationContext();
+                CharSequence text = "You got it right! NOICE!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                textView.setText("");
+                textView2.setText("");
+                editText.setText("");
+                scoreCounter = scoreCounter + 100;
+
+                LinearLayout mainLayout;
+                mainLayout = findViewById(R.id.myLinearLayout);
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                assert imm != null;
+                imm.hideSoftInputFromWindow(mainLayout.getWindowToken(), 0);
+            } else {
+                Context context = getApplicationContext();
+                CharSequence text = "WRONG! Try again :)";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+        }
+        catch(NumberFormatException ex) {
+            //They didn't enter a number.  Pop up a toast or warn them in some other way
+            Context context = getApplicationContext();
+            CharSequence text = "Please select both numbers";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
     }
 }

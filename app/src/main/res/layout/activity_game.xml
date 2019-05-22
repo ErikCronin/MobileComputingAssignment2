@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/myLinearLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,8 +16,15 @@
             android:id="@+id/time_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
             android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
 
         <Button
             android:id="@+id/settings_button_game"
@@ -95,21 +102,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker"/>
+                android:onClick="buttonClicked_numberChecker"
+                tools:ignore="ContentDescription" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker2"/>
+                android:onClick="buttonClicked_numberChecker2"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker3"/>
+                android:onClick="buttonClicked_numberChecker3"
+                tools:ignore="ContentDescription"/>
 
         </TableRow>
 
@@ -122,21 +132,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker4"/>
+                android:onClick="buttonClicked_numberChecker4"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker5"/>
+                android:onClick="buttonClicked_numberChecker5"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker6"/>
+                android:onClick="buttonClicked_numberChecker6"
+                tools:ignore="ContentDescription"/>
         </TableRow>
 
         <TableRow
@@ -148,21 +161,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker7"/>
+                android:onClick="buttonClicked_numberChecker7"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker8"/>
+                android:onClick="buttonClicked_numberChecker8"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker9"/>
+                android:onClick="buttonClicked_numberChecker9"
+                tools:ignore="ContentDescription"/>
         </TableRow>
 
         <TableRow
@@ -174,21 +190,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker10"/>
+                android:onClick="buttonClicked_numberChecker10"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker11"/>
+                android:onClick="buttonClicked_numberChecker11"
+                tools:ignore="ContentDescription"/>
 
             <ImageButton
                 android:id="@+id/imageButton12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars"
-                android:onClick="buttonClicked_numberChecker12"/>
+                android:onClick="buttonClicked_numberChecker12"
+                tools:ignore="ContentDescription"/>
         </TableRow>
 
     </TableLayout>
