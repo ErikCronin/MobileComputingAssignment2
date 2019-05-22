@@ -42,6 +42,8 @@ public class GameActivity extends AppCompatActivity {
     public static int scoreCounter = 10000;
     private boolean running = true;
 
+    public static int gameGuess = 6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -389,12 +391,20 @@ public class GameActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 assert imm != null;
                 imm.hideSoftInputFromWindow(mainLayout.getWindowToken(), 0);
+
+                gameGuess--;
+                if(gameGuess == 0){
+                    Intent intent = new Intent(this, HighscoreActivity.class);
+                    startActivity(intent);
+                }
             } else {
                 Context context = getApplicationContext();
                 CharSequence text = "WRONG! Try again :)";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
+
+                scoreCounter = scoreCounter - 200;
             }
         }
         catch(NumberFormatException ex) {

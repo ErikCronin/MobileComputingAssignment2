@@ -29,13 +29,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="@string/player_name_one"/>
+                android:layout_gravity="start"
+                android:text="@string/_1"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/player_name_one"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/player_score_one" />
         </TableRow>
 
@@ -47,13 +54,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="@string/player_name_two" />
+                android:layout_gravity="start"
+                android:text="@string/_2"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/player_name_two"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/player_score_two" />
         </TableRow>
 
@@ -65,13 +79,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="@string/player_name_three" />
+                android:layout_gravity="start"
+                android:text="@string/_3"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/player_name_three"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/player_score_three" />
         </TableRow>
 
@@ -83,13 +104,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="@string/player_name_four" />
+                android:layout_gravity="start"
+                android:text="@string/_4"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/player_name_four"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/player_score_four" />
         </TableRow>
 
@@ -101,13 +129,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="@string/player_name_five" />
+                android:layout_gravity="start"
+                android:text="@string/_5"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="8dp"
+
+                android:text="@string/player_name_five"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/player_score_five" />
         </TableRow>
 
